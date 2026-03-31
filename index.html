@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BalticRide - Smart Travel across Latvia</title>
+    <style>
+        :root {
+            --primary-blue: #00aff5;
+            --dark-blue: #054752;
+            --light-gray: #f2f2f2;
+            --text-main: #3d5b5f;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            color: var(--text-main);
+            background-color: #fff;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 8%;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-blue);
+            font-weight: 500;
+            margin-left: 20px;
+        }
+
+        .hero {
+            background: #fff;
+            padding: 60px 8%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--dark-blue);
+            margin-bottom: 30px;
+        }
+
+        /* Search Bar Style */
+        .search-box {
+            display: inline-flex;
+            background: #fff;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #ddd;
+        }
+
+        .search-box input {
+            padding: 18px 25px;
+            border: none;
+            border-right: 1px solid #eee;
+            font-size: 1rem;
+            outline: none;
+            width: 200px;
+        }
+
+        .search-box button {
+            background: var(--primary-blue);
+            color: white;
+            border: none;
+            padding: 0 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .search-box button:hover {
+            background: #0084b8;
+        }
+
+        .section-title {
+            margin-top: 50px;
+            padding: 0 8%;
+            font-size: 1.5rem;
+            color: var(--dark-blue);
+        }
+
+        .route-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 20px 8% 60px;
+        }
+
+        .route-card {
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            padding: 20px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .route-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .route-info h4 {
+            margin: 0;
+            color: var(--dark-blue);
+        }
+
+        .price {
+            font-weight: bold;
+            color: var(--primary-blue);
+            font-size: 1.2rem;
+        }
+
+        footer {
+            background: var(--dark-blue);
+            color: white;
+            text-align: center;
+            padding: 40px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .search-box { flex-direction: column; width: 100%; border-radius: 8px; }
+            .search-box input { width: auto; border-right: none; border-bottom: 1px solid #eee; }
+            .search-box button { padding: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="#" class="logo">BalticRide</a>
+    <nav class="nav-links">
+        <a href="#">Find a ride</a>
+        <a href="#">Offer a ride</a>
+        <a href="#" style="color: var(--primary-blue);">Log in</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Your pick of rides at low prices</h1>
+    <div class="search-box">
+        <input type="text" placeholder="Leaving from... (e.g. Riga)">
+        <input type="text" placeholder="Going to... (e.g. Sigulda)">
+        <input type="date">
+        <button>Search</button>
+    </div>
+</section>
+
+<h3 class="section-title">Popular trips in Latvia</h3>
+<div class="route-grid">
+    <div class="route-card">
+        <div class="route-info">
+            <h4>Riga &rarr; Liepāja</h4>
+            <p>Tomorrow, 09:00</p>
+        </div>
+        <div class="price">€6.50</div>
+    </div>
+    <div class="route-card">
+        <div class="route-info">
+            <h4>Riga &rarr; Daugavpils</h4>
+            <p>Today, 17:30</p>
+        </div>
+        <div class="price">€8.00</div>
+    </div>
+    <div class="route-card">
+        <div class="route-info">
+            <h4>Ventspils &rarr; Riga</h4>
+            <p>Friday, 14:00</p>
+        </div>
+        <div class="price">€5.00</div>
+    </div>
+    <div class="route-card">
+        <div class="route-info">
+            <h4>Jelgava &rarr; Riga</h4>
+            <p>In 2 hours</p>
+        </div>
+        <div class="price">€3.50</div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 BalticRide. All rights reserved.</p>
+    <p style="font-size: 0.8rem; opacity: 0.7;">Connecting Latvia, one ride at a time.</p>
+</footer>
+
+</body>
+</html>
